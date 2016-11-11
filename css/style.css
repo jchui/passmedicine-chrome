@@ -1,0 +1,35 @@
+.vulpes a:focus {
+	text-decoration: none;
+}
+
+.ref-values {
+	text-align: center;
+	padding: 10px;
+	background-color: #c2e7ff;
+}
+
+.ref-values a {
+	color: #063e61 !important;
+}
+
+.ref-values a:hover, .ref-values a:visited, .ref-values a:focus {
+	color: #063e61 !important;
+}
+
+.clear-btn {
+	text-align: center;
+	padding: 10px;
+	background-color: #ffe310;
+}
+
+.clear-btn a {
+	color: #6b5e03 !important;
+}
+
+.clear-btn a:hover, .clear-btn a:visited, .clear-btn a:focus {
+	color: #6b5e03 !important;
+}
+
+.highlight {
+	background-color: #fff48e;
+}
