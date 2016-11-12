@@ -11,7 +11,7 @@ var objGroup = [
   { "name": "Haemoglobin,Hb", "value": "Men: 13.5-18 g/dl Women: 11.5-16 g/dl" },
   { "name": "Mean cell volume,MCV", "value": "82-100 fl" },
   { "name": "Platelets,Plt", "value": "150-400 * 109/l" },
-  { "name": "White blood cells,WBC,White cell count", "value": "4-11 * 109/l" },
+  { "name": "White blood cells,WBC,White cell count,White cells,WCC", "value": "4-11 * 109/l" },
   { "name": "Sodium,Na+,Na,Na+ (mmol/l)", "value": "135-145 mmol/l" },
   { "name": "Potassium,K+,K,K+ (mmol/l)", "value": "3.5 - 5.0 mmol/l" },
   { "name": "Urea,Urea (mmol/l)", "value": "2.0-7 mmol/l" },
