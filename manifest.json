@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "PassMedicine Tweaks",
-	"version": "1.0",
+	"version": "1.2",
 	"description": "Adds reference values and highlighting to PassMedicine. [Alpha Version]",
 	"permissions": ["tabs", "*://passmedicine.com/question/question.php*", "*://www.passmedicine.com/question/question.php*"],
 	"content_scripts": [

@@ -1,7 +1,7 @@
 
 // ** PassMedicine **
 
-$("#sidebarwrapper").prepend("<div class='clear-btn vulpes'><a href='#' id='clear-highlight'>Clear Highlights</a></div>");
+$("#sidebarwrapper").prepend("<div id='highlight-wrap' class='vulpes'><input type='checkbox' id='highlight-vp' /><span id='highlight-des'>Highlighting <span class='red'>Disabled</span><br/><span class='hl-info'>Click to toggle</span></span></div>");
 $("#sidebarwrapper").prepend("<div class='ref-values vulpes'><a href='#' id='get-values'>Get Reference Values</a></div>");
 
 
@@ -84,18 +84,35 @@ $("#get-values").click(function() {
 	});
 	
 });
-
+	
 $("#questionblock").on("mouseup", function (e) {
-    var selected = getTextSelection();
-    var range = selected.getRangeAt(0);
-    //console.log(range);
-    if(selected.toString().length > 1){
-        var newNode = document.createElement("span");
-        newNode.setAttribute("class", "highlight");
-        range.surroundContents(newNode);       
+    if(document.getElementById('highlight-vp').checked) {
+	    var selected = getTextSelection();
+	    var range = selected.getRangeAt(0);
+	    //console.log(range);
+	    if(selected.toString().length > 1){
+	        var newNode = document.createElement("span");
+	        newNode.setAttribute("class", "highlight");
+	        range.surroundContents(newNode);      
+	    }
+	    selected.removeAllRanges();
     }
-    selected.removeAllRanges();
  });
+
+$('#highlight-wrap').click(function() {
+	$("#highlight-vp").prop("checked", !$("#highlight-vp").prop("checked"));
+	
+	if($('#highlight-vp').prop("checked")) {
+	    $("#highlight-des").html("Highlighting <span class='green'>Enabled</span><br/><span class='hl-info'>Click to toggle</span>");
+	    $("#highlight-wrap").addClass("enabled");
+	} else {
+	    $("#highlight-des").html("Highlighting <span class='red'>Disabled</span><br/><span class='hl-info'>Click to toggle</span>");
+	    $("#highlight-wrap").removeClass("enabled");
+		$("#questionblock span").removeClass("highlight");
+		$('#questionblock span').contents().unwrap();
+	}
+});
+
 
 function getTextSelection() {
     var seltxt = '';
